@@ -1,0 +1,203 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Group1</groupId>
+  <artifactId>Artifact1</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Project1</name>
+  
+  
+   <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <jre.level>1.8</jre.level>
+	<jdk.level>1.8</jdk.level>
+	
+	
+  <!-- Maven -->
+  <maven-compiler.version>3.7.0</maven-compiler.version>
+  <maven-surefire.version>2.20.1</maven-surefire.version>
+  <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
+  <maven-site.version>3.6</maven-site.version>
+  
+  <!-- Allure report -->
+  <allure.version>1.5.3</allure.version>
+  <allure-reports.dir>${basedir}/target/allure_reports</allure-reports.dir>
+  <aspectj.version>1.8.13</aspectj.version>
+  <allure-report.version>1.5.3</allure-report.version>
+  <allure-maven.version>2.6</allure-maven.version>
+  </properties>
+  
+  
+  <dependencies>
+  <dependency>
+   <groupId>ru.yandex.qatools.allure</groupId>
+   <artifactId>allure-testng-adaptor</artifactId>
+   <version>${allure.version}</version>
+  </dependency>
+<dependency>
+    <groupId>io.appium</groupId>
+    <artifactId>java-client</artifactId>
+    <version>6.1.0</version>
+</dependency>
+
+<dependency>
+    <groupId>org.jbehave.web</groupId>
+    <artifactId>jbehave-web-selenium-flash-archetype</artifactId>
+    <version>3.5.2</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
+<dependency>
+    <groupId>com.sikulix</groupId>
+    <artifactId>sikulixapi</artifactId>
+    <version>1.1.0</version>
+</dependency>
+
+
+  <dependency>
+
+
+   <groupId>org.seleniumhq.selenium</groupId>
+   <artifactId>selenium-java</artifactId>
+   <version>3.13.0</version>
+  </dependency>
+  <dependency>
+   <groupId>org.testng</groupId>
+   <artifactId>testng</artifactId>
+   <version>6.9.9</version>
+  </dependency>
+  
+ 
+ </dependencies>
+  
+  
+  
+  <build>
+  <plugins>
+   <!-- Compiler plug-in -->
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>${maven-compiler.version}</version>
+
+    <configuration>
+     <source>${jdk.level}</source>
+     <target>${jdk.level}</target>
+     <executable>C:\Program Files\Java\jdk1.8.0_201\bin</executable>
+    </configuration>
+   </plugin>
+   <!-- Below plug-in is used to execute tests -->
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-site-plugin</artifactId>
+    <version>${maven-site.version}</version>
+   </plugin>
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>${maven-surefire.version}</version>
+    <configuration>
+
+     <suiteXmlFiles>
+      <!-- TestNG suite XML files -->
+      <suiteXmlFile>testng.xml</suiteXmlFile>
+     </suiteXmlFiles>
+     <testFailureIgnore>true</testFailureIgnore>
+     <argLine>
+      -javaagent:${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar
+     </argLine>
+     <properties>
+      <property>
+       <name>listener</name>
+       <value>ru.yandex.qatools.allure.testng.AllureTestListener</value>
+      </property>
+     </properties>
+    </configuration>
+  
+  		<dependencies>
+     <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+     </dependency>
+    </dependencies>
+   </plugin>
+   <!-- copying the result folder -->
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>${maven-resources-plugin.version}</version>
+    <executions>
+     <!-- copying SureFire reports -->
+     <execution>
+      <id>copy-SureFire-environment</id>
+      <phase>site</phase>
+      <goals>
+       <goal>copy-resources</goal>
+      </goals>
+      <configuration>
+       <outputDirectory>${basedir}/src/test/java/testresult/${suiteName}-${timestamp}/surefire_reports</outputDirectory>
+       <resources>
+        <resource>
+         <directory>${basedir}/target/surefire-reports</directory>
+         <filtering>false</filtering>
+        </resource>
+       </resources>
+      </configuration>
+     </execution>
+     <!-- copying allure reports -->
+     <execution>
+      <id>copy-allure-environment</id>
+      <phase>site</phase>
+      <goals>
+       <goal>copy-resources</goal>
+      </goals>
+      <configuration>
+       <outputDirectory>${basedir}/src/test/java/testresult/${suiteName}-${timestamp}/allure_reports</outputDirectory>
+       <resources>
+        <resource>
+         <directory>${basedir}/target/site</directory>
+         <filtering>false</filtering>
+        </resource>
+       </resources>
+      </configuration>
+     </execution>
+     <!-- copying custom reports -->
+     <execution>
+      <id>copy-custom-environment</id>
+      <phase>site</phase>
+      <goals>
+       <goal>copy-resources</goal>
+      </goals>
+      <configuration>
+       <outputDirectory>${basedir}/src/test/java/testresult/${suiteName}-${timestamp}/custom-reports</outputDirectory>
+       <resources>
+        <resource>
+         <directory>${basedir}/target/custom-reports</directory>
+         <filtering>false</filtering>
+        </resource>
+       </resources>
+      </configuration>
+     </execution>
+    </executions>
+   </plugin>
+  </plugins>
+ </build>
+
+ <!-- Reporting Configuration -->
+ <reporting>
+  <excludeDefaults>true</excludeDefaults>
+  <plugins>
+   <plugin>
+    <groupId>ru.yandex.qatools.allure</groupId>
+    <artifactId>allure-maven-plugin</artifactId>
+    <version>${allure-maven.version}</version>
+    <configuration>
+     <reportVersion>${allure-report.version}</reportVersion>
+     <resultsPattern>target/allure-results</resultsPattern>
+     <outputDirectory>${allure-reports.dir}</outputDirectory>
+    </configuration>
+   </plugin>
+  </plugins>
+ </reporting>
+</project>

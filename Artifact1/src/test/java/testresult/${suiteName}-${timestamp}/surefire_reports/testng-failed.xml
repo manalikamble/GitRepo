@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]">
+  <test name="Test2(failed)">
+    <classes>
+      <class name="com.pack.scripts.ContextClick">
+        <methods>
+          <include name="contextClick"/>
+        </methods>
+      </class> <!-- com.pack.scripts.ContextClick -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->

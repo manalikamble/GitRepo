@@ -1,0 +1,48 @@
+{
+  "features" : [ {
+    "title" : "Without feature",
+    "statistic" : {
+      "total" : 2,
+      "passed" : 0,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 2
+    },
+    "stories" : [ {
+      "uid" : "99b3d9bb839845cb",
+      "title" : "Without story",
+      "statistic" : {
+        "total" : 2,
+        "passed" : 0,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 0,
+        "broken" : 2
+      },
+      "testCases" : [ {
+        "uid" : "7c6e7a11017a747d",
+        "name" : "contextClick",
+        "title" : "Context click",
+        "time" : {
+          "start" : 1552547594381,
+          "stop" : 1552547595146,
+          "duration" : 765
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "afe6561b659ed128",
+        "name" : "contextClick",
+        "title" : "Context click",
+        "time" : {
+          "start" : 1552547594381,
+          "stop" : 1552547595146,
+          "duration" : 765
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      } ]
+    } ]
+  } ]
+}

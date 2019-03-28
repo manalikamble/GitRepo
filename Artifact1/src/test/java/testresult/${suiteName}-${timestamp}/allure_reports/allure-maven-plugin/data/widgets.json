@@ -1,0 +1,59 @@
+{
+  "hash" : "e7105c43ada45c9f6e0006854ef1a1d95249231d",
+  "plugins" : {
+    "total" : {
+      "statistic" : {
+        "total" : 2,
+        "passed" : 0,
+        "pending" : 0,
+        "canceled" : 0,
+        "failed" : 0,
+        "broken" : 2
+      },
+      "time" : {
+        "start" : 1552547594381,
+        "stop" : 1552547595146,
+        "duration" : 765
+      }
+    },
+    "defects" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "count" : 2,
+        "uid" : "1296280f3ccf240d",
+        "message" : "IllegalStateException: The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html",
+        "status" : "BROKEN"
+      } ]
+    },
+    "xunit" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "uid" : "c9a4129b7feaa5f9",
+        "title" : "Suite : Test2",
+        "statistic" : {
+          "total" : 2,
+          "passed" : 0,
+          "pending" : 0,
+          "canceled" : 0,
+          "failed" : 0,
+          "broken" : 2
+        }
+      } ]
+    },
+    "behaviors" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "title" : "Without feature",
+        "statistic" : {
+          "total" : 2,
+          "passed" : 0,
+          "pending" : 0,
+          "canceled" : 0,
+          "failed" : 0,
+          "broken" : 2
+        }
+      } ]
+    },
+    "environment" : [ ]
+  }
+}

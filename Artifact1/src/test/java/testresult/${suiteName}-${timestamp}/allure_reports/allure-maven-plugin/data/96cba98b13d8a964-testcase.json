@@ -1,0 +1,62 @@
+{
+  "uid" : "96cba98b13d8a964",
+  "name" : "contextClick",
+  "title" : "Context click",
+  "time" : {
+    "start" : 1552294282551,
+    "stop" : 1552294282557,
+    "duration" : 6
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 0
+  },
+  "failure" : {
+    "message" : ": Skipped due to dependency on other skipped or failed test methods",
+    "stackTrace" : "ru.yandex.qatools.allure.testng.AllureTestListener$1: Skipped due to dependency on other skipped or failed test methods\n\tat ru.yandex.qatools.allure.testng.AllureTestListener.fireTestCaseCancel(AllureTestListener.java:425)\n\tat ru.yandex.qatools.allure.testng.AllureTestListener.onTestSkipped(AllureTestListener.java:186)\n\tat org.testng.internal.Invoker.runTestListeners(Invoker.java:1678)\n\tat org.testng.internal.Invoker.runTestListeners(Invoker.java:1670)\n\tat org.testng.internal.Invoker.invokeMethod(Invoker.java:696)\n\tat org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)\n\tat org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)\n\tat org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)\n\tat org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)\n\tat org.testng.TestRunner.privateRun(TestRunner.java:774)\n\tat org.testng.TestRunner.run(TestRunner.java:624)\n\tat org.testng.SuiteRunner.runTest(SuiteRunner.java:359)\n\tat org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)\n\tat org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)\n\tat org.testng.SuiteRunner.run(SuiteRunner.java:261)\n\tat org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)\n\tat org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)\n\tat org.testng.TestNG.runSuitesSequentially(TestNG.java:1215)\n\tat org.testng.TestNG.runSuitesLocally(TestNG.java:1140)\n\tat org.testng.TestNG.run(TestNG.java:1048)\n\tat org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)\n\tat org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)\n\tat org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)\n\tat org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:373)\n\tat org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:334)\n\tat org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:119)\n\tat org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:407)\n"
+  },
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "CANCELED",
+  "suite" : {
+    "uid" : "690a7690f12b89ec",
+    "name" : "Suite : Test2",
+    "title" : "Suite : Test2"
+  },
+  "steps" : [ ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "testSuite",
+    "value" : "Suite"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "suite-title",
+    "value" : "Suite : Test2"
+  }, {
+    "name" : "testClass",
+    "value" : "com.pack.scripts.ContextClick"
+  }, {
+    "name" : "testMethod",
+    "value" : "contextClick"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "host",
+    "value" : "Prdxn-71"
+  }, {
+    "name" : "thread",
+    "value" : "8888@Prdxn-71.main(1)"
+  }, {
+    "name" : "testGroup",
+    "value" : "Test2"
+  }, {
+    "name" : "suite-name",
+    "value" : "Suite : Test2"
+  } ],
+  "parameters" : [ ]
+}

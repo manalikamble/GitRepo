@@ -1,0 +1,31 @@
+{
+  "hosts" : [ {
+    "title" : "Prdxn-71",
+    "threads" : [ {
+      "title" : "8404@Prdxn-71.main(1)",
+      "testCases" : [ {
+        "uid" : "7c6e7a11017a747d",
+        "name" : "contextClick",
+        "title" : "Context click",
+        "time" : {
+          "start" : 1552547594381,
+          "stop" : 1552547595146,
+          "duration" : 765
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "afe6561b659ed128",
+        "name" : "contextClick",
+        "title" : "Context click",
+        "time" : {
+          "start" : 1552547594381,
+          "stop" : 1552547595146,
+          "duration" : 765
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      } ]
+    } ]
+  } ]
+}
