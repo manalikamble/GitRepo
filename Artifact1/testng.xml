@@ -5,7 +5,7 @@
    <test name="Test2">
   
     <classes>
-      <class name="com.pack.scripts.ContextClick"/>
+      <class name="com.pack.scripts.Youtube"/>
     </classes>
   </test> <!-- Test -->
 
