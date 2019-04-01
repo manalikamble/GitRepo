@@ -10,10 +10,10 @@ package com.pack.scripts;
 	import org.testng.annotations.AfterClass;
 	import org.testng.annotations.BeforeClass;
 	import org.testng.annotations.Test;
-	import org.sikuli.script.FindFailed;
+	/*import org.sikuli.script.FindFailed;
 	import org.sikuli.script.ImagePath;
 	import org.sikuli.script.Pattern;
-	import org.sikuli.script.Screen;
+	import org.sikuli.script.Screen;*/
 
 	public class Youtube {
 		WebDriver driver;

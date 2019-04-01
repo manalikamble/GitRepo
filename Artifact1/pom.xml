@@ -35,23 +35,26 @@
    <artifactId>allure-testng-adaptor</artifactId>
    <version>${allure.version}</version>
   </dependency>
+  
+  <!--
 <dependency>
     <groupId>io.appium</groupId>
     <artifactId>java-client</artifactId>
     <version>6.1.0</version>
-</dependency>
-
+</dependency>-->
+<!--
 <dependency>
     <groupId>org.jbehave.web</groupId>
     <artifactId>jbehave-web-selenium-flash-archetype</artifactId>
     <version>3.5.2</version>
-</dependency>
+</dependency>-->
 <!-- https://mvnrepository.com/artifact/com.sikulix/sikulixapi -->
-<dependency>
+
+<!--  <dependency>
     <groupId>com.sikulix</groupId>
     <artifactId>sikulixapi</artifactId>
     <version>1.1.0</version>
-</dependency>
+</dependency> -->
 
 
   <dependency>
