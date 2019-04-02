@@ -103,7 +103,7 @@
 
      <suiteXmlFiles>
       <!-- TestNG suite XML files -->
-      <suiteXmlFile>testng.xml</suiteXmlFile>
+      <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
      </suiteXmlFiles>
      <testFailureIgnore>true</testFailureIgnore>
      <argLine>
@@ -153,7 +153,7 @@
       <id>copy-allure-environment</id>
       <phase>site</phase>
       <goals>
-       <goal>copy-resources</goal>
+      <goal>copy-resources</goal>
       </goals>
       <configuration>
        <outputDirectory>${basedir}/src/test/java/testresult/${suiteName}-${timestamp}/allure_reports</outputDirectory>
